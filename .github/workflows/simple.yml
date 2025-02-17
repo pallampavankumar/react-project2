@@ -1,6 +1,6 @@
 name: react-workflow
 
-on: push
+on: [push,workflow_dispatch]
 
 jobs:
   test:
