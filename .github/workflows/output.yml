@@ -1,8 +1,10 @@
 name: Output information
-on: workflow_dispatch
+on: 
+  workflow_dispatch
+
 jobs:
   info:
-    runs-on : windows-latest
+    runs-on: windows-latest
     steps:
-      -name: output GitHub context
-       run :echo "${{toJSON(github)}}"
+      - name: Output GitHub context
+        run: echo "${{ toJSON(github) }}"
