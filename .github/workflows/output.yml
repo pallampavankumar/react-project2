@@ -1,6 +1,10 @@
 name: Output information
 on: 
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      -dev
+      -int
+      -prod
 
 jobs:
   info:
