@@ -2,13 +2,17 @@ name: Output information
 on: 
   workflow_dispatch:
     inputs:
-      -dev
-      -int
-      -prod
+      stage:
+        type: choice
+        description: Select stage
+        options:
+          - dev
+          - int
+          - prod
 
 jobs:
   info:
     runs-on: windows-latest
     steps:
       - name: Output GitHub context
-        run: echo "${{ toJSON(github) }}"
+        run: echo "${{ toJson(github) }}"
